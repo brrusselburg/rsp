@@ -8,6 +8,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Company.create!(name: "A Cool Company")
+Company.create!(name: "WOW Productions")
+Company.create!(name: "trixie cosmetics")
+Company.create!(name: "Drag Co.")
 
 Job.create!(title: "Airbender II", company_id: 1)
+Job.create!(title: "King of the Pirates", company_id: 2)
+Job.create!(title: "Chef", company_id: 2)
+Job.create!(title: "Pokemon Trainer", company_id: 3)
+
