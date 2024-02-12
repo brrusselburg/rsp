@@ -13,43 +13,52 @@
 
   <body class="bg-blue">
     <div class="container text-yellow p-10">
-      <h1>The Recruiter Sanity Project</h1>
+      <h1 class="text-center">The Recruiter Sanity Project</h1>
+      <br />
 
       <!-- Dashboard badges -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="bg-slate-50 p-5 m-2 rounded-md flex justify-between items-center shadow">
+          <div class="bg-slate-50 p-5 m-2 rounded-md flex justify-between items-center shadow bg-yellow">
             <div>
-              <h3 class="font-bold">Total Users</h3>
-              <p class="text-gray-500">100</p>
+              <h3 class="font-bold text-blue">Total Applications</h3>
+              <p class= "text-blue">
+                <%= Job.all.count %>
+              </p>
             </div>
             <i class="fa-solid fa-users p-4 bg-gray-200 rounded-md"></i>
           </div>
 
-          <div class="bg-slate-50 p-5 m-2 flex justify-between items-center shadow">
+          <div class="bg-slate-50 p-5 m-2 flex justify-between items-center shadow bg-yellow">
             <div>
-              <h3 class="font-bold">Total Active Users</h3>
-              <p class="text-gray-500">65</p>
+              <h3 class="font-bold text-blue">Applications This Week</h3>
+              <p class="text-blue">
+                <%= Job.weekly_count %>
+              </p>
             </div>
             <i class="fa-solid fa-users p-4 bg-green-200 rounded-md"></i>
           </div>
 
-          <div class="bg-slate-50 p-5 m-2 flex justify-between items-center shadow">
+          <div class="bg-slate-50 p-5 m-2 flex justify-between items-center shadow bg-yellow">
             <div>
-              <h3 class="font-bold">Total In Active Users</h3>
-              <p class="text-gray-500">30</p>
+              <h3 class="font-bold text-blue">Applications Today</h3>
+              <p class="text-blue">
+                <%= Job.daily_count %>
+              </p>
             </div>
             <i class="fa-solid fa-users p-4 bg-yellow-200 rounded-md"></i>
           </div>
 
-          <div class="bg-slate-50 p-5 m-2 flex justify-between items-center shadow">
+          <div class="bg-slate-50 p-5 m-2 flex justify-between items-center shadow bg-yellow">
             <div>
-              <h3 class="font-bold">Deleted Users</h3>
-              <p class="text-gray-500">5</p>
+              <h3 class="font-bold text-blue">Companies Applied To</h3>
+              <p class="text-blue">
+                <%= Company.all.count %>
+              </p>
             </div>
             <i class="fa-solid fa-users p-4 bg-red-200 rounded-md"></i>
           </div>
         </div>
-
+      <br />
         <!-- body -->
       <%= yield %>
     </div>
