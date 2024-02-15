@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         mono: ['Inter var', ...defaultTheme.fontFamily.mono],
+        'custom': ['Quicksand'],
       },
     },
   },
